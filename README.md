@@ -1,48 +1,30 @@
-##NGINX Log Analyzer (Shell Script)
+# NGINX Log Analyzer
 
-##About
-This is a simple shell script that analyzes NGINX access logs. It shows you:
+A simple Bash script that analyzes NGINX access logs and generates a readable summary report. This project was built to practice log parsing, Bash scripting, and command-line data processing.
 
-The top 5 IP addresses that made the most requests
+---
 
-The top 5 paths that were accessed
+## Features
 
-The top 5 response status codes (like 200, 404)
+- Displays the top 5 IP addresses making requests
+- Lists the top 5 most requested resource paths
+- Summarizes the top 5 HTTP response status codes
+- Shows the top 5 most frequent user agents
+- Output results to both the terminal and a `report.txt` file
 
-The top 5 user agents (browsers, tools, etc.)
+---
 
-It was built to help practice basic Linux commands like awk, sort, uniq, and head — useful for DevOps and scripting beginners.
+## Requirements
 
-##How to Use
+- Bash shell
+- Common command-line tools: `awk`, `sort`, `uniq`, `head`
+- An NGINX access log in standard format
 
-Download or clone this project
+---
 
-git clone https://github.com/yourusername/nginx-log-analyzer.git
-cd nginx-log-analyzer
+## Getting Started
 
-Make sure the script can run
-
-chmod +x analyze-log.sh
-
-Download a sample log file (or use your own)
-
-curl -O https://gist.githubusercontent.com/kamranahmedse/e66c3b9ea89a1a030d3b739eeeef22d0/raw/77fb3ac837a73c4f0206e78a236d885590b7ae35/nginx-access.log
-
-Run the script
-
-./analyze-log.sh
-
-The script will print the results on screen and save them to a file called report.txt.
-
-##Files
-
-analyze-log.sh — the main script
-
-nginx-access.log — the input log file
-
-report.txt — the output report
-
-README.md — this file
-
-##Why I Made This
-I wanted to learn how real logs work and how to process them using simple shell tools. This was a small project to practice scripting and understand how logs can give useful info
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/nginx-log-analyzer.git
+   cd nginx-log-analyzer
