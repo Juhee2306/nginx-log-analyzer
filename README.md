@@ -54,4 +54,4 @@ nginx-log-analyzer/
 
 ## Author
 Juhee Lavanya
-Built as a hands-on project to learn Bash scripting and log analysis
+-Built as a hands-on project to learn Bash scripting and log analysis
