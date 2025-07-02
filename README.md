@@ -45,10 +45,10 @@ A simple Bash script that analyzes NGINX access logs and generates a readable su
 ## Project structure
 
 nginx-log-analyzer/
-├── analyze-log.sh        # Main Bash script
-├── nginx-access.log      # Sample NGINX log (optional)
-├── report.txt            # Auto-generated analysis report
-└── README.md             # Project documentation
+─ analyze-log.sh        # Main Bash script
+─ nginx-access.log      # Sample NGINX log (optional)
+─ report.txt            # Auto-generated analysis report
+─ README.md             # Project documentation
 
 ----
 
