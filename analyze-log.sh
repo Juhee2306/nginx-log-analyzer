@@ -11,7 +11,7 @@ OUTPUT_FILE="report.txt"
 print_usage(){
     echo " Usage: $0 -f <log_file> [-o <output_file>]"
     echo "OPTIONS:"
-    echo " -f Path ti nginx access log file"
+    echo " -f Path to nginx access log file"
     echo " -o Output report file"
     echo " -h Show this help message"
 }
@@ -66,3 +66,13 @@ while getopts ":f:o:h" opt; do
        :)echo "Option -$OPTARG requires an argument." >&2; print_usage; exit1 ;;
     esac
 done
+
+
+if [ -z "$LOG_FILE" ]; then
+  echo "LOG FILE REQUIRED"
+  print_usage
+  exit 1
+fi
+
+validate_log_file
+generate_report
