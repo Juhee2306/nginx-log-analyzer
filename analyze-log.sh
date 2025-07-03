@@ -53,8 +53,16 @@ generate_report(){
        get_top_paths
        get_status_codes
        get_user_agents
-}> "$OUTPUT_FILE"
+    }> "$OUTPUT_FILE"
 
   echo "REPORT SAVED"
 }
-
+while getopts ":f:o:h" opt; do
+    case $opt in
+       f)LOG_FILE="$OPTARG" ;;
+       o)OUTPUT_FILE="$OPTARG" ;;
+       h)print_usage; exit 0 ;;
+      /?)echo "INVALID OPTION: -$OPTARG" >$2; print_usage; exit1 ;;
+       :)echo "Option -$OPTARG requires an argument." >&2; print_usage; exit1 ;;
+    esac
+done
