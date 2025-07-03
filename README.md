@@ -22,7 +22,7 @@ A simple Bash script that analyzes NGINX access logs and generates a readable su
 
 ---
 
-## Getting Started
+## Getting Started (Locally)
 
 1. **Clone the repository**
    ```bash
@@ -40,18 +40,33 @@ A simple Bash script that analyzes NGINX access logs and generates a readable su
 5. **View the generated report**
    The output is saved in report.txt and also displayed in the terminal.
 
+## Docker Usage
+
+If you don't want to install anything locally, run it in a container.
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t nginx-log-analyzer .
+2. **Run the tool inside Docker**
+   ```bash
+   docker run -v $(pwd):/app nginx-log-analyzer -f nginx-access.log -o report.txt
+
+This will analyze the log and write report.txt into your current folder.
+
+
 ---
 
 ## Project structure
 
 nginx-log-analyzer/
-─ analyze-log.sh        # Main Bash script
-─ nginx-access.log      # Sample NGINX log (optional)
-─ report.txt            # Auto-generated analysis report
-─ README.md             # Project documentation
+─ analyze-log.sh         Main Bash script
+─ nginx-access.log       Sample NGINX log (optional)
+- report.txt             Outout report 
+- Dockerfile             Container setup
+─ README.md              Project documentation
 
 ----
 
 ## Author
 Juhee Lavanya
--Built as a hands-on project to learn Bash scripting and log analysis
+-Built as a hands-on project to learn Bash scripting, log analysis and Docker containerization.
