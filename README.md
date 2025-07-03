@@ -59,11 +59,11 @@ This will analyze the log and write report.txt into your current folder.
 ## Project structure
 
 nginx-log-analyzer/
-─ analyze-log.sh         Main Bash script
-─ nginx-access.log       Sample NGINX log (optional)
-- report.txt             Outout report 
-- Dockerfile             Container setup
-─ README.md              Project documentation
+1. analyze-log.sh         Main Bash script
+2. nginx-access.log       Sample NGINX log (optional)
+3. report.txt             Outout report 
+4. Dockerfile             Container setup
+5. README.md              Project documentation
 
 ----
 
